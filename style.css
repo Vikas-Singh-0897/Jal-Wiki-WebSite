@@ -1,0 +1,207 @@
+/* General CSS for whole page */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header CSS */
+header{
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+    grid-template-columns: 1fr 10fr 1fr;
+    background-color: rgb(226, 238, 240);
+}
+.welcome{
+    height: max-content;
+    width: 98%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 6px;
+    padding: 12px 0px;
+    background-color: rgb(231, 243, 245);
+}
+.welcome div h1{
+    padding-bottom: 12px;
+}
+.welcome div h3{
+    padding-bottom: 6px;
+}
+
+/* Header Responsive CSS */
+@media (width<600px){
+    header{
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+}
+@media (width<400px){
+    header{
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+    .welcome div{
+        font-size: 0.8rem;
+    }
+}
+
+/* Main CSS */
+main{
+    height: max-content;
+    width: 98%;
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,max-content);
+}
+.box1, .box2, .box3, .box4{
+    height: max-content;
+    width: 98%;
+    padding: 6px;
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,max-content);
+    background-color: rgb(231, 243, 245);
+}
+.box1 img, .box2 img, .box3 img, .box4 img{
+    float: left;
+    display: inline;
+    height: 26vh;
+    padding: 0px 12px 0px 0px;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 6px;
+    background-color: aquamarine;
+}
+.content{
+    padding: 5px 6px;
+}
+.content p{
+    display: inline;
+}
+#wc_read_more, #wm_read_more, #bwm_read_more, #wwc_read_more{
+    cursor: pointer;
+    color: blue;
+}
+#wc_more, #wm_more, #bwm_more, #wwc_more{
+    display: none;
+}
+.box3{
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.box4{
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+ul li{
+    margin-bottom: 18px;
+    list-style: none;
+    list-style-position: inside;
+}
+
+/* Responsive Main */
+@media (width<1084px){
+    .box1 img, .box2 img{
+        height: max-content;
+        padding-bottom: 6px;
+        width: 90%;
+    }
+}
+@media (width<868px){
+    .heading h2{
+        font-size: 1.4rem;
+    }
+}
+@media (width<800px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,max-content);
+    }
+    .box1, .box2, .box3, .box4{
+        grid-column: 1/2;
+    }
+    .box1{
+        grid-row: 1/2;
+    }
+    .box2{
+        grid-row: 2/3;
+    }
+    .box3{
+        grid-row: 3/4;
+    }
+    .box4{
+        grid-row: 4/5;
+    }
+    .heading h2{
+        font-size: 1.6rem;
+    }
+    .box1 img, .box2 img, .box3 img, .box4 img{
+        height: max-content;
+        padding-bottom: 0px;
+        width: 55%;
+    }
+    ul li{
+        margin-bottom: 12px;
+        list-style: none;
+        list-style-position: inside;
+    }
+}
+@media (width<468px){
+    .heading h2{
+        font-size: 1.2rem;
+    }
+}
+
+/* Let's Get Social */
+#get_social{
+    height: 15vh;
+    width: 100%;
+}
+.social{
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social span a{
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+footer{
+    height: max-content;
+    width: 100%;
+    color: aliceblue;
+    background: linear-gradient(#2E4A54,#08351b);
+}
+#copyright{
+    height: 5vh;
+    width: 100%;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
